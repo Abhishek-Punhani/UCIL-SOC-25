@@ -6,7 +6,10 @@ const Home = () => {
     <div>
       <Navbar />
       <div>
-        This is body
+        {/* for body  carosel,hero*/}
+      </div>
+      <div>
+        {/* footer */}
       </div>
     </div>
   );
