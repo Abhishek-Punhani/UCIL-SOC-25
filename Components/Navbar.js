@@ -14,17 +14,17 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <div className="hover:cursor-pointer text-xl font-bold text-gray-800">
+            <div className="hover:cursor-pointer text-3xl font-bold text-gray-800">
               UICIL
             </div>
             <div className="hover:cursor-pointer hidden md:ml-10 md:flex md:space-x-8">
-              <div className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium hover:cursor-pointer">
+              <div className="text-gray-700 hover:text-blue-600 px-3 py-2 text-xl font-medium hover:cursor-pointer">
                 Home
               </div>
-              <div className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium hover:cursor-pointer">
+              <div className="text-gray-700 hover:text-blue-600 px-3 py-2 text-xl font-medium hover:cursor-pointer">
                 Grievance
               </div>
-              <div className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium hover:cursor-pointer">
+              <div className="text-gray-700 hover:text-blue-600 px-3 py-2 text-xl font-medium hover:cursor-pointer">
                 Stories
               </div>
             </div>
@@ -33,7 +33,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <button
               onClick={toggleLanguage}
-              className="hidden md:block text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium hover:cursor-pointer"
+              className="hidden md:block text-gray-700 hover:text-blue-600 px-3 py-2 text-xl font-medium hover:cursor-pointer"
             >
               {language === "English" ? "Hindi" : "English"}
             </button>
