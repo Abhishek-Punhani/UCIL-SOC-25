@@ -5,16 +5,22 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const testimonials = [
   {
-    name: 'Sita',
-    message: 'Our water has been yellow for months. We need clean water.',
+    name: 'Geeta Devi',
+    message:
+      'We’re sick, our kids are sick. And we’re not heard. The water is not safe.',
+    avatar: '/avatars/Seeta.jpg',
   },
   {
-    name: 'Ram',
-    message: 'My kids are falling sick. We have no health support.',
+    name: 'Ramesh Kumar',
+    message:
+      'Our fields are dry. The land doesn’t grow anymore. There is no compensation.',
+    avatar: '/avatars/ram.jpg',
   },
   {
-    name: 'Lakshman',
-    message: 'We were displaced with no proper relocation help.',
+    name: 'Anonymous Resident, Jaduguda',
+    message:
+      'After the mine came, many of us got sick. The dust is everywhere. We can’t breathe freely.',
+    avatar: '/avatars/Suresh.jpg',
   },
 ];
 
@@ -30,13 +36,56 @@ export default function TestimonialCarousel() {
   };
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '40px 0' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Community Voices</h2>
+    <div style={{ maxWidth: '700px', margin: '0 auto', padding: '40px 0' }}>
+      <h2 style={{ textAlign: 'center', marginBottom: '30px', color: '#2c3e50' }}>
+        Community Voices 🗣️
+      </h2>
+
       <Slider {...settings}>
         {testimonials.map((t, index) => (
-          <div key={index} style={{ background: '#f3f3f3', padding: '20px', borderRadius: '10px' }}>
-            <p style={{ fontSize: '18px', fontStyle: 'italic' }}>"{t.message}"</p>
-            <p style={{ textAlign: 'right', marginTop: '10px', fontWeight: 'bold' }}>— {t.name}</p>
+          <div
+            key={index}
+            style={{
+              background: '#f9f9f9',
+              borderRadius: '12px',
+              padding: '30px',
+              boxShadow: '0 4px 15px rgba(0,0,0,0.1)',
+              textAlign: 'center',
+            }}
+          >
+            <img
+              src={t.avatar}
+              alt={t.name}
+              style={{
+                width: 80,
+                height: 80,
+                borderRadius: '50%',
+                objectFit: 'cover',
+                marginBottom: '20px',
+              }}
+            />
+            <p
+              style={{
+                fontSize: '18px',
+                fontStyle: 'italic',
+                marginBottom: '15px',
+                lineHeight: '1.5',
+                color: '#333',
+                color: '#f0f0f0',
+              }}
+            >
+              "{t.message}"
+            </p>
+            <p
+              style={{
+                fontWeight: 'bold',
+                fontSize: '16px',
+                color: '#555',
+                color: '#f0f0f0',
+              }}
+            >
+              — {t.name}
+            </p>
           </div>
         ))}
       </Slider>
